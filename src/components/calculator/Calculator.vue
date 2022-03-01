@@ -183,7 +183,7 @@ h2 {
 }
 .calculator {
   min-width: 200px;
-  max-width: 600px;
+  max-width: 520px;
   margin: 0 auto;
   /* position: absolute;
   left: 50%;
