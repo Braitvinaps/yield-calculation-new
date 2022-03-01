@@ -126,7 +126,7 @@ export default {
       F1: null,
       F2: null,
       G1: null,
-      G2: null
+      G2: null,
     };
   },
   computed: {
