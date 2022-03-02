@@ -94,20 +94,20 @@
     </form>
 
     <div class="result">
-      <p>Получено таблеток общее B = {{B}} кг</p>
-      <p>Потери E = {{E}} кг</p>
-      <p>Колличество таблеток после стадии таблетирования K1 = {{K1}} шт</p>
-      <p>Колличество таблеток после стадии таблетирования K2 = {{K2}} шт</p>
-      <p>Колличество таблеток после стадии таблетирования общее K = {{K}} шт</p>
-      <p>Выход = {{sum}} %</p>
-      <p>Min масса таблетки H1 = {{H1}} мг</p>
-      <p>Min масса таблетки H2 = {{H2}} мг</p>
-      <p>Max масса таблетки I1 = {{I1}} мг</p>
-      <p>Max масса таблетки I2 = {{I2}} мг</p>
-      <p>Колличество таблеток с Min массой Y1 = {{Y1}} шт</p>
-      <p>Колличество таблеток с Min массой Y2 = {{Y2}} шт</p>
-      <p>Колличество таблеток с Max массой Z1 = {{Z1}} шт</p>
-      <p>Колличество таблеток с Max массой Z2 = {{Z2}} шт</p>
+      <p>Получено таблеток общее B = <b>{{B}}</b> кг</p>
+      <p>Потери E = <b>{{E}}</b> кг</p>
+      <p>Колличество таблеток после стадии таблетирования K1 = <b>{{K1}}</b> шт</p>
+      <p>Колличество таблеток после стадии таблетирования K2 = <b>{{K2}}</b> шт</p>
+      <p>Колличество таблеток после стадии таблетирования общее K = <b>{{K}}</b> шт</p>
+      <p>Выход = <b>{{sum}}</b> %</p>
+      <p>Min масса таблетки H1 = <b>{{H1}}</b> мг</p>
+      <p>Min масса таблетки H2 = <b>{{H2}}</b> мг</p>
+      <p>Max масса таблетки I1 = <b>{{I1}}</b> мг</p>
+      <p>Max масса таблетки I2 = <b>{{I2}}</b> мг</p>
+      <p>Колличество таблеток с Min массой Y1 = <b>{{Y1}}</b> шт</p>
+      <p>Колличество таблеток с Min массой Y2 = <b>{{Y2}}</b> шт</p>
+      <p>Колличество таблеток с Max массой Z1 = <b>{{Z1}}</b> шт</p>
+      <p>Колличество таблеток с Max массой Z2 = <b>{{Z2}}</b> шт</p>
     </div>
   </div>
 </template>
@@ -136,10 +136,10 @@ export default {
       return this.A - (this.B1 + this.B2) - this.D;
     },
     K1() {
-      return (this.B1 * 1000000) / this.F1;
+      return Math.round((this.B1 * 1000000) / this.F1);
     },
     K2() {
-      return (this.B1 * 1000000) / this.F2;
+      return Math.round((this.B1 * 1000000) / this.F2);
     },
     K() {
       return this.K1 + this.K2;
@@ -160,16 +160,16 @@ export default {
       return this.F2 + this.G2;
     },
     Y1() {
-      return (this.B1 * 1000000) / this.H1;
+      return Math.round((this.B1 * 1000000) / this.H1);
     },
     Y2() {
-      return (this.B2 * 1000000) / this.H2;
+      return Math.round((this.B2 * 1000000) / this.H2);
     },
     Z1() {
-      return (this.B1 * 1000000) / this.I1;
+      return Math.round((this.B1 * 1000000) / this.I1);
     },
     Z2() {
-      return (this.B2 * 1000000) / this.I2;
+      return Math.round((this.B2 * 1000000) / this.I2);
     },
   },
 };
@@ -195,7 +195,7 @@ h2 {
   background-color: rgb(223, 226, 214);
   padding: 10px;
   margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -203,7 +203,7 @@ h2 {
   text-align: left;
   background-color: rgb(223, 226, 214);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 </style>
