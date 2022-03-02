@@ -48,7 +48,6 @@
         <input
           class="D"
           type="number"
-          placeholder="указать значение"
           v-model.number="D"
         />
       </p>
@@ -122,7 +121,7 @@ export default {
       B1: null,
       B2: null,
       C: null,
-      D: null,
+      D: 0.0028,
       F1: null,
       F2: null,
       G1: null,
